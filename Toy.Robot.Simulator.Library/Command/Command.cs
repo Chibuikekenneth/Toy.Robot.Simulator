@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/// <summary>
+/// This contains enumerations of program commands
+/// </summary>
 
 namespace Toy.Robot.Simulator.Library.Command
 {

@@ -8,7 +8,9 @@ namespace Toy.Robot.Simulator
         {
             const string instructions =
                 @"**************************************
-                    Toy Robot Simulator
+                    Toy Robot Simulator 
+
+                  ***This allows for a simulation of a toy robot moving on a 6 x 6 square tabletop***
                 
                   # 1. PLACE - PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.
                   # 2. RIGHT - to turn the robot 90 degrees Right without changing its current position
