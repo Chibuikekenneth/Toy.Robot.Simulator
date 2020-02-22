@@ -1,5 +1,8 @@
-﻿namespace Toy.Robot.Simulator.Library
+﻿namespace Toy.Robot.Simulator.Library.Message
 {
+    /// <summary>
+    /// This class contains helper messages used by the robot
+    /// </summary>
     public class Message
     {
         public const string NOT_PLACED = "Invalid command: Please ensure that the PLACE command is using format: PLACE X,Y,DIRECTION";

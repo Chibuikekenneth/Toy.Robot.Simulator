@@ -1,11 +1,14 @@
 ﻿
-namespace Toy.Robot.Simulator.Library.Robot
+namespace Toy.Robot.Simulator.Library
 {
-    public enum Direction
+    /// <summary>
+    /// This class contains Directions (constant) used by the robot 
+    /// </summary>
+    public class Direction
     {
-        North,
-        East,
-        South,
-        West
+        public const string NORTH = "NORTH";
+        public const string EAST = "EAST";
+        public const string SOUTH = "SOUTH";
+        public const string WEST = "WEST";
     }
 }

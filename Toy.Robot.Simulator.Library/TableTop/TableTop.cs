@@ -1,5 +1,5 @@
 ﻿
-namespace Toy.Robot.Simulator.Library.TableTop
+namespace Toy.Robot.Simulator.Library
 {
     /// <summary>
     /// This class contains the The Table Surface that the robot sits on, specifically, it has a Top of XTablesize(6) and YTablesize(6)
