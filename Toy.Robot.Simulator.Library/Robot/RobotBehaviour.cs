@@ -6,7 +6,7 @@ namespace Toy.Robot.Simulator.Library
     /// <summary>
     /// This class contains actions and behaviours performed by the robot
     /// </summary>
-    public class Robot
+    public class RobotBehaviour
     {
         public string direction;
         public bool Placed = false;
@@ -37,7 +37,7 @@ namespace Toy.Robot.Simulator.Library
             {
                 tableTop.X_Position = XOriginalPosition;
                 tableTop.Y_Position = YOriginalPosition;
-                result = Message.Message.OUT_OF_BOUND;
+                result = Message.OUT_OF_BOUND;
             }
 
             return result;
@@ -98,7 +98,7 @@ namespace Toy.Robot.Simulator.Library
 
             if (!tableTop.CheckPositionValidation())
             {
-                result = Message.Message.OUT_OF_BOUND;
+                result = Message.OUT_OF_BOUND;
             }
             else
                 Placed = true;

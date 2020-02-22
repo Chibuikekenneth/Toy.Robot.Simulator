@@ -2,7 +2,7 @@
 /// This contains string constants of program commands used by the robot
 /// </summary>
 
-namespace Toy.Robot.Simulator.Library.Command
+namespace Toy.Robot.Simulator.Library
 {
     public class Command
     {

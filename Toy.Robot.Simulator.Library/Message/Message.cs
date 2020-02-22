@@ -1,4 +1,4 @@
-﻿namespace Toy.Robot.Simulator.Library.Message
+﻿namespace Toy.Robot.Simulator.Library
 {
     /// <summary>
     /// This class contains helper messages used by the robot

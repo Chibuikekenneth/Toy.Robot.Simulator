@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Toy.Robot.Simulator.Library.Command
+namespace Toy.Robot.Simulator.Library
 {
     /// <summary>
     /// This class checks and validate all neccesary command to be used by the robot, and makes sure it performs all its actions
     /// </summary>
-    public class CommandChecker
+    public class TRobot
     {
-         Robot robot = new Robot();
+         RobotBehaviour robot = new RobotBehaviour();
 
         public string Commands(string commandInput)
         {
@@ -22,7 +22,7 @@ namespace Toy.Robot.Simulator.Library.Command
                 }
                 else if (! robot.Placed)
                 {
-                    result = Message.Message.NOT_PLACED;
+                    result = Message.NOT_PLACED;
                 }
                 else if (command.Contains(Command.REPORT))
                 {
@@ -41,13 +41,13 @@ namespace Toy.Robot.Simulator.Library.Command
                     robot.Left();
                 }
                 else
-                    result = Message.Message.COMMAND_NOT_RECOGNISED;
+                    result = Message.COMMAND_NOT_RECOGNISED;
 
             }
             catch (Exception e)
             {
 
-                result = Message.Message.VALID_COMMAND;
+                result = Message.VALID_COMMAND;
             }
 
             return result;
