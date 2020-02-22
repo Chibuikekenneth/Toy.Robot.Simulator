@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace Toy.Robot.Simulator.Library
+﻿
+namespace Toy.Robot.Simulator.Library.TableTop
 {
     /// <summary>
     /// This class contains the The Table Surface that the robot sits on, specifically, it has a Top of XTablesize(6) and YTablesize(6)
@@ -13,8 +12,8 @@ namespace Toy.Robot.Simulator.Library
         private int YTablesize { get; set; }
 
 
-        private int X_Position { get; set; }
-        private int Y_Position { get; set; }
+        public int X_Position { get; set; }
+        public int Y_Position { get; set; }
 
 
         //Default Table sizes 6 x 6 as Strictly specified
