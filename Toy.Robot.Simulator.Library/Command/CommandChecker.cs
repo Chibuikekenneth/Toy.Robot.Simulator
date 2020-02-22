@@ -7,7 +7,7 @@ namespace Toy.Robot.Simulator.Library.Command
     /// </summary>
     public class CommandChecker
     {
-        Robot robot = new Robot();
+         Robot robot = new Robot();
 
         public string Commands(string commandInput)
         {
@@ -16,27 +16,27 @@ namespace Toy.Robot.Simulator.Library.Command
 
             try
             {
-                if (command == Command.PLACE)
+                if (command.Contains(Command.PLACE))
                 {
                     result = robot.Place(command);
                 }
-                else if (!robot.Placed)
+                else if (! robot.Placed)
                 {
                     result = Message.Message.NOT_PLACED;
                 }
-                else if (command == Command.REPORT)
+                else if (command.Contains(Command.REPORT))
                 {
                     result = robot.GetReport();
                 }
-                else if (command == Command.MOVE)
+                else if (command.Contains(Command.MOVE))
                 {
                     result = robot.Move();
                 }
-                else if (command == Command.RIGHT)
+                else if (command.Contains(Command.RIGHT))
                 {
                     robot.Right();
                 }
-                else if (command == Command.LEFT)
+                else if (command.Contains(Command.LEFT))
                 {
                     robot.Left();
                 }

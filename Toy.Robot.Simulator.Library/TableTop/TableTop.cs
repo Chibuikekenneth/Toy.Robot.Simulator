@@ -25,8 +25,10 @@ namespace Toy.Robot.Simulator.Library
 
         public bool CheckPositionValidation()
         {
-            if ((X_Position <= 0) || (Y_Position <= 0)) return false;
-            else if ((X_Position > XTablesize) || (Y_Position > YTablesize)) return false;
+            if ((X_Position < 0) || (Y_Position < 0)) 
+                return false;
+            else if ((X_Position > XTablesize) || (Y_Position > YTablesize)) 
+                return false;
             else 
                 return true;
         }

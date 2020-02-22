@@ -12,8 +12,6 @@ namespace Toy.Robot.Simulator.Library
         public bool Placed = false;
         TableTop tableTop = new TableTop();
 
-
-
         //MOVE will move the toy robot one unit forward in the direction it is currently facing.
         public string Move()
         {
