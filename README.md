@@ -58,13 +58,17 @@ Clone the Repository
 ```
     -This is where the Toy Robot interacts directly with the User.
     -cd Toy.Robot.Simulator
+    -dotnet build
     -dotnet run
 ```
 ##### 2. Toy.Robot.Simulator.Library
 ```
     -This project struture contains all the business logic and functionalities of the Robot.
-    -cd Toy.Robot.Simulator.Library
-    -dotnet build
+```
+```bash
+    cd Toy.Robot.Simulator.Library
+    
+    dotnet build
 ```
 ##### 3. Toy.Robot.Simulator.Test
 ```
