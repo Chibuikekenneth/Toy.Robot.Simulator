@@ -1,7 +1,7 @@
 ## Toy Robot Simulator
 This C# `.NET Core` solution is a simulator of a toy robot that moves on a `6 x 6` square tabletop. The development of this project is driven by unit tests.
 
-#### Instructions and Valid Commands
+### Instructions and Valid Commands
 Follow the on screen instructions to place a robot and move it around the board. To exit the application at any time type EXIT 
 ```. The library allows for a simulation of a toy robot moving on a 6 x 6 square tabletop.
 . There are no obstructions on the table surface.
@@ -49,25 +49,25 @@ MOVE
 REPORT
 Output: 3,2,NORTH
 ```
-#### Installing and Running the Application
+### Installing and Running the Application
 Clone the Repository
 `git clone https://github.com/Chibuikekenneth/Toy.Robot.Simulator.git `
 
-The application comprises of three layers
+#### The application comprises of three layers
+##### 1. Toy.Robot.Simulator
 ```
- 1. Toy.Robot.Simulator
     -This is where the Toy Robot interacts directly with the User.
     -cd Toy.Robot.Simulator
     -dotnet run
 ```
+##### 2. Toy.Robot.Simulator.Library
 ```
- 2. Toy.Robot.Simulator.Library
     -This project struture contains all the business logic and functionalities of the Robot.
     -cd Toy.Robot.Simulator.Library
     -dotnet build
 ```
+##### 3. Toy.Robot.Simulator.Test
 ```
- 3. Toy.Robot.Simulator.Test
     -This project struture contains all the unit test for the functionalities of the Robot.
     -cd Toy.Robot.Simulator.Test
     -dotnet restore
