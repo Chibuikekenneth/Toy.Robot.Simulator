@@ -55,7 +55,8 @@ Clone the Repository
 
 #### The application comprises of three layers
 ##### 1. Toy.Robot.Simulator
-    This is where the Toy Robot interacts directly with the User.
+    This is the Console Application / Command Promt interface, that takes in command.
+    Also, where the Toy Robot interacts directly with the User.
 ```bash
     cd Toy.Robot.Simulator
     
