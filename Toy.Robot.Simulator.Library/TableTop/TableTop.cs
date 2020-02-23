@@ -16,7 +16,7 @@ namespace Toy.Robot.Simulator.Library
         public int Y_Position { get; set; }
 
 
-        //Default Table sizes 6 x 6 as Strictly specified
+        //Default Table sizes 6 x 6 as Strictly specified, starting from 0 - 5
         public TableTop()
         {
             XTablesize = 6;
@@ -27,7 +27,7 @@ namespace Toy.Robot.Simulator.Library
         {
             if ((X_Position < 0) || (Y_Position < 0)) 
                 return false;
-            else if ((X_Position > XTablesize) || (Y_Position > YTablesize)) 
+            else if ((X_Position >= XTablesize) || (Y_Position >= YTablesize)) 
                 return false;
             else 
                 return true;
