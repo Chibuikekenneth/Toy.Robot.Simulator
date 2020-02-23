@@ -1,5 +1,5 @@
 ##Toy Robot Simulator
-This C# `.NET Core` solution is a simulator of a toy robot that moves on a tabletop. The development of this project is driven by unit tests.
+This C# `.NET Core` solution is a simulator of a toy robot that moves on a `6 x 6` square tabletop. The development of this project is driven by unit tests.
 
 ####Instructions and Valid Commands
 Follow the on screen instructions to place a robot and move it around the board. To exit the application at any time type EXIT 
@@ -16,10 +16,60 @@ Follow the on screen instructions to place a robot and move it around the board.
 . REPORT will announce the X,Y and orientation of the robot.
 . A robot that is not on the table can choose to ignore the MOVE, LEFT, RIGHT and REPORT commands.
 . The library should discard all invalid commands and parameters.
-```
-<h4>Installing and Running</h4>
-The application runs in a single executable file which can be opened by double clicking it. The user can follow instructions on the console and also use it to type their input. For convenience the file can be downloaded from here:
-<br><a href = "https://github.com/jeff1978/Toy-Robot-Simulator/blob/master/ToyRobotSimulator/bin/Debug/ToyRobotSimulator.exe">ToyRobotSimulator.exe</a>
 
-####Unit Testing
-To Test, navigate to test project using : 
+Example Input and Output:
+a)
+PLACE 0,0,NORTH
+MOVE
+REPORT
+Output: 0,1,NORTH
+
+b)
+PLACE 0,0,NORTH
+LEFT
+REPORT
+Output: 0,0,WEST
+
+c)
+PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+Output: 3,3,NORTH
+
+d)
+PLACE 1,2,EAST
+MOVE
+LEFT
+MOVE
+PLACE 3,1
+MOVE
+REPORT
+Output: 3,2,NORTH
+```
+####Installing and Running the Application
+Clone the Repository
+`git clone https://github.com/Chibuikekenneth/Toy.Robot.Simulator.git `
+
+The application comprises of three layers
+```
+ 1. Toy.Robot.Simulator
+    -This is where the Toy Robot interacts directly with the User.
+    -cd Toy.Robot.Simulator
+    -dotnet run
+```
+```
+ 2. Toy.Robot.Simulator.Library
+    -This project struture contains all the business logic and functionalities of the Robot.
+    -cd Toy.Robot.Simulator.Library
+    -dotnet build
+```
+```
+ 3. Toy.Robot.Simulator.Test
+    -This project struture contains all the unit test for the functionalities of the Robot.
+    -cd Toy.Robot.Simulator.Test
+    -dotnet restore
+    -dotnet run test
+``` 
