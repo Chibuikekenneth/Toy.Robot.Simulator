@@ -55,27 +55,27 @@ Clone the Repository
 
 #### The application comprises of three layers
 ##### 1. Toy.Robot.Simulator
-    -This is where the Toy Robot interacts directly with the User.
+    This is where the Toy Robot interacts directly with the User.
 ```bash
-    -cd Toy.Robot.Simulator
+    cd Toy.Robot.Simulator
     
-    -dotnet build
+    dotnet build
     
-    -dotnet run
+    dotnet run
 ```
 ##### 2. Toy.Robot.Simulator.Library
-    -This project struture contains all the business logic and functionalities of the Robot.
+    This project struture contains all the business logic and functionalities of the Robot.
 ```bash
     cd Toy.Robot.Simulator.Library
     
     dotnet build
 ```
 ##### 3. Toy.Robot.Simulator.Test
-    -This project struture contains all the unit test for the functionalities of the Robot.
+    This project struture contains all the unit test for the functionalities of the Robot.
 ```bash
-    -cd Toy.Robot.Simulator.Test
+    cd Toy.Robot.Simulator.Test
     
-    -dotnet restore
+    dotnet restore
     
-    -dotnet run test
+    dotnet run test
 ``` 
