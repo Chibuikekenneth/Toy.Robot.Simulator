@@ -81,7 +81,7 @@ namespace Toy.Robot.Simulator.Library
         //GETREPORT will announce the X,Y and orientation of the robot.
         public string GetReport()
         {
-            return string.Format("Output: {0},{1},{2}", tableTop.X_Position, tableTop.Y_Position, direction.ToUpper());
+            return string.Format(tableTop.X_Position + "," + tableTop.Y_Position + "," + direction.ToUpper());
         }
 
 
@@ -90,11 +90,18 @@ namespace Toy.Robot.Simulator.Library
         {
             string result = string.Empty;
             char[] PositionChars = { ',', ' ' };
+
             string[] wordsInCommand = command.Split(PositionChars);
 
             tableTop.X_Position = Int32.Parse(wordsInCommand[1]);
-            tableTop.Y_Position = Int32.Parse(wordsInCommand[2]);
-            direction = wordsInCommand[3];
+            tableTop.Y_Position = Int32.Parse(wordsInCommand[2]);  
+
+            if(wordsInCommand.Length == 3 && Placed == true)
+            {
+                PlacedWithoutDirection(command, direction);
+            }
+            else 
+                direction = wordsInCommand[3];
 
             if (!tableTop.CheckPositionValidation())
             {
@@ -104,6 +111,20 @@ namespace Toy.Robot.Simulator.Library
                 Placed = true;
 
             return result;
+        }
+
+        //This method is only invoked when the Robot has been placed initially and when a direction is not specified by the Robot
+        public void PlacedWithoutDirection(string command, string PlacedDirection)
+        {
+            char[] PositionChars2 = { ',', ' ' };
+            string[] wordsInCommand2 = command.Split(PositionChars2);
+            tableTop.X_Position = Int32.Parse(wordsInCommand2[1]);
+            tableTop.Y_Position = Int32.Parse(wordsInCommand2[2]);
+
+            if (PlacedDirection != string.Empty)
+            {
+                direction = PlacedDirection;
+            }
         }
     }
 }

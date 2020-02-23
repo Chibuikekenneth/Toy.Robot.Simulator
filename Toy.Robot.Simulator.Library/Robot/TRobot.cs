@@ -24,6 +24,7 @@ namespace Toy.Robot.Simulator.Library
                 {
                     result = Message.NOT_PLACED;
                 }
+                
                 else if (command.Contains(Command.REPORT))
                 {
                     result = robot.GetReport();
