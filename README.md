@@ -78,5 +78,5 @@ Clone the Repository
     
     dotnet restore
     
-    dotnet run test
+    dotnet test
 ``` 

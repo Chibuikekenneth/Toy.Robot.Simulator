@@ -16,7 +16,7 @@ namespace Toy.Robot.Simulator.Library
         public int Y_Position { get; set; }
 
 
-        //Default Table sizes 6 x 6 as Strictly specified, starting from 0 - 5
+        //Default Table sizes 6 x 6 as Strictly specified
         public TableTop()
         {
             XTablesize = 6;
